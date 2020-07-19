@@ -57,13 +57,15 @@ export default class SignIn extends React.Component {
             label="password"
           />
 
-          <BaseButton type="submit">
-            Sign In
-          </BaseButton>
+          <section className="button-group">
+            <BaseButton type="submit">
+              Sign In
+            </BaseButton>
 
-          <BaseButton onClick={signInWithGoogle}>
-            Sign in with Google
-          </BaseButton>
+            <BaseButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </BaseButton>
+          </section>
         </form>
       </article>
     );
