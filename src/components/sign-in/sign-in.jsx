@@ -4,6 +4,8 @@ import "./sign-in.scss";
 import BaseInput from "../base/input/base-input";
 import BaseButton from "../base/button/base-button";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 export default class SignIn extends React.Component {
   constructor(props) {
     super(props);
@@ -55,8 +57,12 @@ export default class SignIn extends React.Component {
             label="password"
           />
 
-          <BaseButton type="submit" value="Submit">
+          <BaseButton type="submit">
             Sign In
+          </BaseButton>
+
+          <BaseButton onClick={signInWithGoogle}>
+            Sign in with Google
           </BaseButton>
         </form>
       </article>
