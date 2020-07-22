@@ -18,7 +18,14 @@
     overflow-y: auto;
   }
 
+  .item-list {
+    list-style-type: none;
+    display: grid;
+    grid-gap: 1rem;
+    gap: 1rem;
+  }
+
   button {
-    margin-top: auto;
+    margin-top: 0.2rem;
   }
 }
