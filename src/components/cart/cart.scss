@@ -1,7 +1,7 @@
 .cart-dropdown {
   position: absolute;
   min-width: 20rem;
-  height: 30rem;
+  max-height: 50rem;
   display: flex;
   flex-direction: column;
   padding: 20px;
