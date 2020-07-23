@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .directory-menu {
     width: 100%;
     display: flex;

@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .menu-item {
     min-width: 30%;
     height: 240px;
@@ -45,7 +45,7 @@ export default {
         margin-left: 7.5px;
     }
 
-    .background-image {
+    & .background-image {
         width: 100%;
         height: 100%;
         background-position: center;
@@ -53,7 +53,7 @@ export default {
         position: absolute;
     }
 
-    .content {
+    & .content {
         height: 90px;
         padding: 0 25px;
         display: flex;
@@ -64,7 +64,7 @@ export default {
         background-color: white;
         opacity: 0.7;
 
-        .title {
+        & .title {
             font-weight: bold;
             text-transform: uppercase;
             margin-bottom: 6px;
@@ -72,7 +72,7 @@ export default {
             color: #4a4a4a;
         }
 
-        .subtitle {
+        & .subtitle {
             font-weight: lighter;
             font-size: 16px;
         }
