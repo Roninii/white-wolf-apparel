@@ -27,8 +27,8 @@
                     Sign In
                 </BaseButton>
 
-                <BaseButton @click.prevent="signInWithGoogle" isGoogleSignIn>
-                    Sign in with Google
+                <BaseButton @click.prevent="signInWithGoogle" inverted>
+                    <GoogleIcon /> Google
                 </BaseButton>
             </section>
         </form>
@@ -38,12 +38,14 @@
 <script>
 import BaseButton from '@/components/Base/BaseButton';
 import BaseInput from '@/components/Base/BaseInput';
+import GoogleIcon from '@/components/Base/GoogleIcon';
 
 export default {
     name: 'SignIn',
     components: {
         BaseButton,
         BaseInput,
+        GoogleIcon,
     },
     data() {
         return { email: '', password: '' };

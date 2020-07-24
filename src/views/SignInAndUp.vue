@@ -1,21 +1,28 @@
 <template>
-    <div className="sign-in-and-sign-up">
+    <div class="sign-in-and-sign-up">
         <SignIn />
-        <!-- <SignUp /> -->
+        <SignUp />
     </div>
 </template>
 
 <script>
 import SignIn from '@/components/SignInUp/SignIn';
-// import SignUp from '@/components/SignInUp/SignUp'
+import SignUp from '@/components/SignInUp/SignUp';
 
 export default {
     name: 'SignInAndUp',
     components: {
         SignIn,
-        // SignUp
+        SignUp,
     },
 };
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.sign-in-and-sign-up {
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+</style>
