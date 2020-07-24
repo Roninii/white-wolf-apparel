@@ -1,0 +1,22 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  img {
+    width: 12rem;
+    height: auto;
+  }
+
+  .item-details {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+
+    .name {
+      font-size: 16px;
+    }
+  }
+}

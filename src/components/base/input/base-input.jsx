@@ -10,14 +10,16 @@ const BaseInput = ({ handleChange, label, ...props }) => (
       onChange={handleChange}
       {...props}
     />
-    {label ? (
-      <label
-        htmlFor={`${props.name}`}
-        className={`${props.value.length ? "shrink" : ""} form-input-label`}
-      >
-        {label}
-      </label>
-    ) : null}
+    {label
+      ? (
+        <label
+          htmlFor={`${props.name}`}
+          className={`${props.value?.length ? "shrink" : ""} form-input-label`}
+        >
+          {label}
+        </label>
+      )
+      : null}
   </div>
 );
 

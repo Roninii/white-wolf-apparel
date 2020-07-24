@@ -2,8 +2,15 @@ import React from "react";
 
 import "./base-button.scss";
 
-const BaseButton = ({ children, ...props }) => (
-  <button className="base-button" {...props}>
+const BaseButton = ({ children, isGoogleSignIn, inverted, ...props }) => (
+  <button
+    className={`
+      ${isGoogleSignIn ? "google-sign-in" : ""}
+      ${inverted ? "inverted" : ""}
+      base-button
+    `}
+    {...props}
+  >
     {children}
   </button>
 );

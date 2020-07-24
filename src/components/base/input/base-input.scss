@@ -21,8 +21,10 @@
     border-bottom: 1px solid var(--gray);
     margin: 25px 0;
 
-    &:focus {
+    &:focus,
+    &:required {
       outline: none;
+      box-shadow: none;
     }
 
     &:focus ~ .form-input-label {
