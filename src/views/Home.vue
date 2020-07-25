@@ -1,7 +1,7 @@
 <template>
-    <div class="homepage">
+    <main class="homepage">
         <Directory />
-    </div>
+    </main>
 </template>
 
 <script>
