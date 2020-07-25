@@ -18,7 +18,8 @@
             <router-link v-else class="option" to="/sign-in">
                 Sign In
             </router-link>
-            <!-- <CartIcon /> -->
+
+            <CartIcon />
         </nav>
         <!-- <Cart /> -->
     </header>
@@ -26,6 +27,7 @@
 
 <script>
 import Logo from '@/components/Logo';
+import CartIcon from '@/components/Nav/CartIcon';
 
 export default {
     name: 'Header',
@@ -36,6 +38,7 @@ export default {
     },
     components: {
         Logo,
+        CartIcon,
     },
 };
 </script>
