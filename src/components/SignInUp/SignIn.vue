@@ -40,6 +40,8 @@ import BaseButton from '@/components/Base/BaseButton';
 import BaseInput from '@/components/Base/BaseInput';
 import GoogleIcon from '@/components/Base/GoogleIcon';
 
+import { signInWithGoogle } from '@/firebase/firebase.utils';
+
 export default {
     name: 'SignIn',
     components: {
@@ -52,9 +54,7 @@ export default {
     },
     methods: {
         handleSubmit() {},
-        signInWithGoogle() {
-            console.log('test');
-        },
+        signInWithGoogle,
     },
 };
 </script>

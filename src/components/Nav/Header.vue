@@ -12,7 +12,7 @@
             </router-link>
 
             <!-- Sign in / Sign out -->
-            <button v-if="currentUser" class="option">
+            <button v-if="currentUser" class="option" @click="signOut">
                 Sign Out
             </button>
             <router-link v-else class="option" to="/sign-in">
@@ -29,16 +29,23 @@
 import Logo from '@/components/Logo';
 import CartIcon from '@/components/Nav/CartIcon';
 
+import { auth } from '@/firebase/firebase.utils';
+
 export default {
     name: 'Header',
-    data() {
-        return {
-            currentUser: false,
-        };
-    },
     components: {
         Logo,
         CartIcon,
+    },
+    computed: {
+        currentUser() {
+            return this.$store.state.currentUser;
+        },
+    },
+    methods: {
+        signOut() {
+            auth.signOut();
+        },
     },
 };
 </script>
@@ -74,7 +81,7 @@ export default {
         & button.option {
             height: 100%;
             line-height: 1.2rem;
-            font-size: 24px;
+            font-size: 1rem;
             font-family: inherit;
             background-color: transparent;
             border: none;

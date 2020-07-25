@@ -1,5 +1,5 @@
 <template>
-    <button class="cart-icon" @click="toggleCartHidden">
+    <button class="cart-icon">
         <ShoppingIcon class="shopping-icon" />
         <span class="item-count">0</span>
     </button>
