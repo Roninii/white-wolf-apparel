@@ -1,6 +1,6 @@
 <template>
     <div class="group">
-        <input :id="name" class="form-input" v-bind="$attrs" v-on="eventListeners" />
+        <input :id="name" class="form-input" :value="value" v-bind="$attrs" v-on="eventListeners" />
         <label v-if="label" :for="name" :class="[value.length ? 'shrink' : '', 'form-input-label']">
             {{ label }}
         </label>

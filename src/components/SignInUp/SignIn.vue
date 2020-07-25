@@ -40,7 +40,7 @@ import BaseButton from '@/components/Base/BaseButton';
 import BaseInput from '@/components/Base/BaseInput';
 import GoogleIcon from '@/components/Base/GoogleIcon';
 
-import { signInWithGoogle } from '@/firebase/firebase.utils';
+import { auth, signInWithGoogle } from '@/firebase/firebase.utils';
 
 export default {
     name: 'SignIn',
@@ -53,7 +53,14 @@ export default {
         return { email: '', password: '' };
     },
     methods: {
-        handleSubmit() {},
+        async handleSubmit() {
+            await auth
+                .signInWithEmailAndPassword(this.email, this.password)
+                .catch(error => console.log(error));
+
+            this.email = '';
+            this.password = '';
+        },
         signInWithGoogle,
     },
 };
