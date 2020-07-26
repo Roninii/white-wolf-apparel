@@ -46,6 +46,8 @@
 import BaseInput from '@/components/Base/BaseInput';
 import BaseButton from '@/components/Base/BaseButton';
 
+import { auth, createUserProfileDocument } from '@/firebase/firebase.utils';
+
 export default {
     name: 'SignUp',
     data() {
@@ -61,7 +63,25 @@ export default {
         BaseButton,
     },
     methods: {
-        handleSubmit() {},
+        async handleSubmit() {
+            const { password, confirmPassword, displayName, email } = this;
+
+            if (password !== confirmPassword) return;
+
+            // create user record
+            try {
+                const { user } = await auth.createUserWithEmailAndPassword(email, password);
+
+                await createUserProfileDocument(user, displayName);
+
+                this.displayName = '';
+                this.email = '';
+                this.password = '';
+                this.confirmPassword = '';
+            } catch (e) {
+                console.log('There was a problem creating the user.', e);
+            }
+        },
     },
 };
 </script>
