@@ -1,0 +1,26 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+    --black: #2d2d2d;
+    --gray: #718096;
+    --google-blue: #4285f4;
+    --google-blue-darker: #357ae8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 20px 80px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
