@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import router from '@/router/index.js'
+
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
@@ -13,8 +15,12 @@ export const store = new Vuex.Store({
         }
     },
     actions: {
-        updateCurrentUser({commit}, user) {
+        updateCurrentUser({commit, dispatch}, user) {
             commit('SET_CURRENT_USER', user);
+            if(user) dispatch('redirectUser')
+        },
+        redirectUser() {
+            router.push('/')
         }
     }
 });

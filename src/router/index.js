@@ -18,7 +18,7 @@ Vue.use(VueRouter)
   {
     path: '/sign-in',
     name: 'signInUp',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SignInAndUp.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/SignInAndUp.vue'),
   }
 ]
 
