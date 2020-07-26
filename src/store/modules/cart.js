@@ -1,4 +1,4 @@
-import { addItemToCart } from "@/utils/cart.utils.js";
+import { addItemtoCart } from "@/utils/cart.utils.js";
 
 export const namespaced = true
 
@@ -12,7 +12,7 @@ export const mutations = {
         state.hidden = !state.hidden
     },
     ADD_ITEM(state, item) {
-        state.cartItems = addItemToCart(state.cartItems, item)
+        state.cartItems = addItemtoCart(state.cartItems, item)
     }
 }
 
