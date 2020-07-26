@@ -1,31 +1,37 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-  const routes = [
+const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: Home
-    },
-    {
-      path: '/shop/:category',
-      name: 'shop',
-      component: () => import(/* webpackChunkName: "shop" */ '../views/Shop.vue'),
-    },
+    path: "/",
+    name: "home",
+    component: Home,
+  },
   {
-    path: '/sign-in',
-    name: 'signInUp',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SignInAndUp.vue'),
-  }
-]
+    path: "/shop/:category",
+    name: "shop",
+    component: () => import(/* webpackChunkName: "shop" */ "../views/Shop.vue"),
+  },
+  {
+    path: "/shop",
+    name: "shop",
+    component: () => import(/* webpackChunkName: "shop" */ "../views/Shop.vue"),
+  },
+  {
+    path: "/sign-in",
+    name: "signInUp",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/SignInAndUp.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
