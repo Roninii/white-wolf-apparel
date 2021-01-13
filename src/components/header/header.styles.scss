@@ -18,8 +18,15 @@
     align-items: center;
     justify-content: flex-end;
 
+    button {
+      border: none;
+      background: none;
+      font-size: inherit;
+    }
+    
     .option {
       padding: 10px 15px;
+      cursor: pointer;
     }
   }
 }

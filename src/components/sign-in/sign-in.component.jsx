@@ -2,6 +2,8 @@ import React from 'react'
 import BaseButton from '../base-button/base-button.component'
 import FormInput from '../form-input/form-input.component'
 
+import { signInWithGoogle } from '../../firebase/firebase.utils'
+
 import './sign-in.styles.scss'
 
 class SignIn extends React.Component {
@@ -52,7 +54,18 @@ class SignIn extends React.Component {
                         required 
                     />
 
-                    <BaseButton type="submit">Submit</BaseButton>
+                    <div className="button-group">
+                        <BaseButton type="submit">Submit</BaseButton>
+                        <BaseButton 
+                            isGoogleSignIn
+                            onClick={(e) => {
+                                e.preventDefault()
+                                signInWithGoogle()
+                            }}
+                        >
+                            Sign in with Google
+                    </BaseButton>
+                    </div>
                 </form>
             </div>
         )
